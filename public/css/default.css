@@ -1,0 +1,525 @@
+body{
+	background: #f1efee;
+	margin: 0px;
+}
+
+#header{
+	position: relative;
+	background: #181717;
+	margin: 0px auto;
+}
+
+
+#content{
+	background: #f1efee;
+}
+
+#footer{
+	background: #181717;
+	padding: 20px;
+	clear: both;
+}
+
+.footer_menu{
+	text-align: center;
+	float: left;
+	font-family: helvetica;
+	font-size: 14px;
+}
+
+.footer_menu_item{
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+
+.footer_information{
+	float: right;
+	color: #fff;
+	text-align: center;
+	font-size: 17px;
+}
+
+.logo{
+	height: 90px;
+	width: 162px;
+	padding-left: 173px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.primary_menu{
+	font-family: helvetica;
+	position: absolute;
+	bottom: 10px;
+	right: 173px;
+	padding: 5px;
+	font-size: 15px;
+}
+
+.primary_menu_item{
+	line-height: 2;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 16px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.header_hr{
+	position: relative;
+	padding: 0px;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 100%;
+	height: 10px;
+	background-color: #999a9a;
+}
+.menu_hr{
+	position: relative;
+	padding: 0px;
+	margin: -10 auto;
+	overflow: hidden;
+	width: 1050px;
+	height: 10px;
+	background-color: #fdc426;
+}
+
+
+.banner{
+	position: relative;
+	margin-top: 9px;
+	height: 350px;
+	width: 1050px;
+}
+
+.content_body{
+	height: auto!important;
+	width: 1050px;
+	min-height: 400px;
+	background-color: #fff;
+	position: relative;
+	overflow: hidden;
+}
+.content_end_hr{
+	overflow: hidden;
+	bottom: 0px;
+	width: 1050px;
+	height: 2px;
+	background-color: #fdc426;
+}
+
+
+/*home page*/
+
+.read_more_links_home{
+	text-decoration: none;
+	font-size: 9px;
+	font-family: helvetica;
+	font-weight: bold;
+	color: #0793c8;
+	/*float: left;*/
+	float: right;
+	margin-top: 15px;
+}
+
+.home_content_title_hr{
+	margin-bottom: 6px;
+	display: block;
+	overflow: hidden;
+	width: 250px;
+	background-color: #fdc426;
+	color: #fdc426;
+	height: 2px;
+}
+
+.home_content_title{
+	margin-top: 65px;
+	margin-bottom: 60px;
+}
+
+.home_block{
+	height: auto!!important;
+	overflow: hidden;
+	/*word-spacing: 4px;*/
+	font-weight: 500;
+	width: 250px;
+	float: left;
+	margin-left: 70px;
+	font-family: helvetica;
+	font-size: 14px;
+	/*text-align: left;*/
+	text-align: justify;
+}
+
+/*service controller*/
+
+.read_more_links_service{
+	text-decoration: none;
+	font-size: 9px;
+	font-family: helvetica;
+	font-weight: bold;
+	color: #0793c8;
+	float: right;
+	margin-top: 15px;
+}
+
+
+.banner_service{
+	position: relative;
+	/*margin-top: 5px;*/
+	margin-top: -5px;
+	height: 350px;
+	width: 1050px;
+}
+
+.secondary_menu{
+	width: 1050px;
+	height: 50px;
+	position: relative;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+	background-color: #fdc426;
+	text-align: center;
+
+	font-family: helvetica;
+	font-size: 11px;
+	line-height: 60px;
+}
+
+.secondary_menu_item{
+	line-height: 4;
+	float: left;
+	margin-right: 16px;
+	margin-left: 20px;
+}
+
+.linie_neagra{
+	margin-top: 47px;
+	margin-left: 45px;
+	width: 620px;
+	height: 18px;
+	float: left;
+}
+
+
+.service_content_title_hr{
+	margin-bottom: 4px;
+	display: block;
+	overflow: hidden;
+	width: 250px;
+	background-color: #fdc426;
+	color: #fdc426;
+	height: 2px;
+}
+
+.service_content_title{
+	margin-top: 32px;
+	margin-bottom: 15px;
+	color: #919191;
+}
+
+.service_block{
+	/*position: absolute;*/
+	position: relative;
+	overflow: hidden;
+	word-spacing: 4px;
+	font-weight: 500;
+	width: 600px;
+	float: left;
+	margin-left: 70px;
+	font-family: helvetica;
+	font-size: 14px;
+	text-align: left;
+	height: auto!important;
+}
+
+.text_link{
+	clear: none;
+	display: inline;
+}
+
+.side_data{
+	float: right;
+	height: auto!important;
+}
+.side_data_contact{
+	float: right;
+	margin-right: 80px;
+	height: auto!important;
+}
+
+.image_link{
+	position: relative;
+	float: right;
+	margin-top: 55px;
+	margin-right: 55px;
+	
+}
+.image_link_image{
+	width: 286px;
+	height: 260px;
+}
+
+.image_link_text{
+	position: absolute;
+	z-index: 100;
+	font-family: helvetica;
+	font-size: 20;
+	top: 180px;
+	right:50px;
+}
+
+.image_link_text2{
+	text-align: right;
+	position: absolute;
+	z-index: 100;
+	font-family: helvetica;
+	font-size: 20;
+	top: 165px;
+	right:20px;	
+}
+
+.image_link_text3{
+	text-align: right;
+	position: absolute;
+	z-index: 100;
+	font-family: helvetica;
+	font-size: 20;
+	top: 165px;
+	right:20px;	
+}
+
+.rent_a_car_video{
+	position: relative;
+	clear: both;
+	float: right;
+	margin-top: 140px;
+	margin-right: 55px;
+	width: 286px;
+}
+
+.rent_a_car_video_text{
+	font-family: helvetica;
+	font-size: 14;
+	color: #919191;
+	float: left;
+	margin-bottom: 5;
+}
+
+.blocks{
+	float: left;
+	height: auto!important;
+	width: 600px;
+}
+
+.contact_map{
+	margin-left: -70px;
+	margin-top: 50px;
+	margin-bottom: 10px;
+
+}
+
+.constructions_project_photos{
+	width: 300px;
+	margin-right: 50px;
+	margin-top: 100px;
+}
+
+.construction_photo{
+	height: 250;
+	width: 250;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.contruction_photo_text{
+	font-family: helvetica;
+	font-size: 12px;
+	text-align: justify;
+}
+
+.construction_photo_text_title{
+	color: #919191;
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+
+.construction_photo_end_hr{
+	overflow: hidden;
+	width: 165px;
+	height: 2px;
+	background-color: #fdc426;
+	margin-bottom: 5px;
+}
+
+/*end service controller*/
+
+/*extra_information element*/
+.extra_informations_element{
+	display: block;
+	height: auto!important;
+	overflow: hidden;
+	width: 1050px;
+	margin-top: 25px;
+	margin-bottom: 50px;
+
+}
+
+.extra_information_block{
+	float: left;
+	width: 175px;
+	font-family: helvetica;
+	font-size: 12px;
+	color: #696969;
+	/*color: #727373;*/
+}
+
+.extra_information_block_title{
+	font-family: helvetica;
+	font-size: 14px;
+	color: #919191;
+	margin-bottom: 15px;
+}
+
+.certificates_images{
+	width: 75px;
+}
+
+.certification_img{
+	height: 22px;
+	float: left;
+}
+
+.facebook_actions{
+	z-index: 100;
+	margin-left: 40px;
+	overflow: visible;
+}
+
+/*end extra_information element*/
+
+.designed_by{
+	font-family: helvetica;
+	font-size: 12px;
+	float: right;
+	margin-right: 10px;
+}
+
+/*link management*/
+
+.text_link a:link, .text_link a:visited
+{
+	color: #0793c8;
+	text-decoration: none;
+}
+.text_link a:hover, .text_link a:visited:hover
+{
+	color: #0793c8;
+	text-decoration: underline;
+}
+
+
+.designed_by a:link, .designed_by a:visited
+{
+	color: #0793c8;
+	text-decoration: none;
+}
+.designed_by a:hover, .designed_by a:visited:hover
+{
+	color: #0793c8;
+	text-decoration: underline;
+}
+
+.image_link_text a:link, .image_link_text a:visited
+{
+	color: #000;
+	text-decoration: none;
+}
+.image_link_text a:hover, .image_link_text a:visited:hover
+{
+	color: #000;
+	font-weight: bold;
+}
+
+
+.image_link_text2 a:link, .image_link_text2 a:visited
+{
+	color: #000;
+	text-decoration: none;
+}
+.image_link_text2 a:hover, .image_link_text2 a:visited:hover
+{
+	color: #000;
+	font-weight: bold;
+}
+
+.image_link_text3 a:link, .image_link_text3 a:visited
+{
+	color: #fff;
+	text-decoration: none;
+}
+.image_link_text3 a:hover, .image_link_text3 a:visited:hover
+{
+	color: #fff;
+	font-weight: bold;
+}
+
+
+
+.primary_menu a:link, a:visited
+{
+	color: #fff;
+	text-decoration: none;
+}
+.primary_menu a:hover, .primary_menu a:visited:hover
+{
+	color: #000000;
+	text-decoration: none;
+	background-color: #fdc426;
+}
+
+
+.secondary_menu a:link, .secondary_menu a:visited
+{
+	color: #000;
+	text-decoration: none;
+}
+.secondary_menu a:hover, .secondary_menu a:visited:hover
+{
+	color: #000;
+	text-decoration: underline;
+}
+
+
+.read_more_links_service a:link, .read_more_links_service a:visited
+{
+	color: #0793c8;
+	text-decoration: none;
+}
+.read_more_links_service a:hover, .read_more_links_service a:visited:hover
+{
+	color: #0793c8;
+	text-decoration: underline;
+}
+
+
+.footer_menu a:link, a:visited
+{
+	color: #fff;
+	text-decoration: none;
+}
+.footer_menu a:hover, .footer_menu a:visited:hover
+{
+	color: #fff;
+	text-decoration: underline;
+}
+
+/*end link management*/
