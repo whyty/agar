@@ -14,7 +14,7 @@ echo"<div class='content_body'>";
 	<div class = 'home_content_title'>
 		<div class='home_content_title_hr'><hr /></div>
 		SCURT ISTORIC
-	</div>
+</div>
 
 
 	<div class='slide'>
@@ -24,7 +24,7 @@ echo"<div class='content_body'>";
 		2012 - se continua activitatea in constructii prin inceperea lucrarilor de mansardare la imobilul de Timisoara de pe str. Timis nr. 20, in urma acestor lucrari rezultand 12 apartamente a cate doua camere, confort 1, decomandate a cate 60mp fiecare;</br>
 		2013 - compania finalizeaza lucrarile de mansardare de pe str. Timis, cele 12 apartamente fiind adaugate la patrimoniul imobiliar al companiei si intrand in circuitul de inchiriere.
 	</div>
-	
+
 </div>
 
 <!-- second block -->

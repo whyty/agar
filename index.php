@@ -1,18 +1,15 @@
 <?php
-
-
-require 'Includes/Bootstrap.php';
-require 'Includes/Controller.php';
-require 'Includes/Model.php';
-require 'Includes/View.php';
-require 'Includes/Database.php';
-require 'Includes/Helper.php';
-
 require 'Config/paths.php';
 
+function __autoload($class) {
+    require LIBS . $class .".php";
+}
 
-$app = new Bootstrap();
+
+// Load the Bootstrap!
+$bootstrap = new Bootstrap();
 
 
+$bootstrap->init();
 
 ?>

@@ -10,14 +10,14 @@ class Admin_Model extends Model
             parent::__construct();
         }
         
-        public function login(){
+        public function signin(){
             $sth = $this->db->prepare("SELECT id FROM users WHERE 
-				login = :login AND password = MD5(:password)");
+				user = :user AND password = MD5(:password)");
             $sth->execute(array(
-                    ':login' => $_POST['login'],
+                    ':user' => $_POST['login'],
                     ':password' => $_POST['password']
             ));
-
+            
             $count =  $sth->rowCount();
             if ($count > 0) {
                     // login
@@ -25,8 +25,13 @@ class Admin_Model extends Model
                     Session::set('loggedIn', true);
                     header('location: ../admin/dashboard');
             } else {
-                    header('location: ../admin');
+                    header('location: ../admin/login');
             }
+        }
+        
+        public function logout(){
+            Session::destroy();
+            header('location: ../admin/login');
         }
 }
 
