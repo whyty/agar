@@ -10,7 +10,7 @@
                 </label>
             </div>
             <div class="col-lg-10">
-                <textarea class="form-control" name="text2" id="wysiwyg" style="width:600px; height:300px;">
+                <textarea class="form-control" name="text2" id="cleditor">
                     <?php echo $data['text']; ?>
                 </textarea>
             </div>

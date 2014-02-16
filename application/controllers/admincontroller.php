@@ -29,7 +29,7 @@ class AdminController extends Controller {
 
 	function addPage(){
                 $this->set('title','Admin - Add page');
-                $types = $this->Admin->query("SELECT * FROM `types` WHERE id <> '9' ORDER BY name ASC");
+                $types = $this->Admin->query("SELECT * FROM `types` ORDER BY name ASC");
 		$this->set('types',$types);
 	}
 	
@@ -64,7 +64,7 @@ class AdminController extends Controller {
             
         }
         
-        function constructii(){
+        function service(){
             
         }
         

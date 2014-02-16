@@ -102,7 +102,7 @@ echo "<img class='banner_service' src='".URL."public/images/bannere/banner_const
                     }
                 }
             ?>
-    </div
+        </div>
 </center>
 
 

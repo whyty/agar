@@ -66,27 +66,25 @@ echo "<img class='banner_service' src='".URL."public/images/bannere/banner_parc_
 
 	?>
 
-	<div class ='blocks'>
-		<div class='service_block'>
-			<div class = 'service_content_title'>
+<div class ='blocks'>
+            <?php
+                foreach($articles_p as $article){
+                    if($article['cols']!='yes'){
+                        echo '<div class="service_block">';
+                        if($article['title']!=''){
+                            echo "<div class = 'service_content_title'>
 				<div class='service_content_title_hr'><hr /></div>
-				VANZARI AUTOTURISME
-			</div>
-			AGAR COMPANY detine un parc auto cu o diversitate de autoturisme, de la cele de fiecare zi, pana la autoturisme de lux si utilitare.</br>
-			Compania selecteaza cu atentie autoturismele ce urmeaza sa fie puse in vanzare si prin asta va ofera o varietate de marci si modele la standarde inatlte.</br>
-			AGAR COMPANY va asigura un istoric detaliat al autoturismelor, iar dvs puteti fi siguri ca veti avea un autoturism la un pret foarte bun si o sursa de incredere.</br>
-			Pentru detalii, va rugam consultati <div class='text_link'><a href='http://agarcars.com' target='_blank'>pagina</a></div> dedicata.
-			<div class='read_more_links_service'><a  href='http://agarcars.com' target='_blank'>CITESTE MAI MULT</a></div>
-
-
-
-
-			<!-- Pentru detalii, va rugam consultati <div class='text_link'><a href='http://agarcars.com' target='_blank'>pagina</a></div> dedicata.</br> -->
-		</div>
-
-	</div>
-</br></br></br></br></br></br></br>
-
+				" . $article['title'] . "
+			</div>";
+                        }
+                            echo "<div class='slide_service'>";
+                            echo $article['text'];
+                            echo '</div>';
+                        echo '</div>';
+                    }
+                }
+            ?>
+        </div>
 </center>
 
 

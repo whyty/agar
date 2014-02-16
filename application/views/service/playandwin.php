@@ -67,12 +67,24 @@ echo "<img class='banner_service' src='".URL."public/images/bannere/banner_play_
 	?>
 
 	<div class ='blocks'>
-
-		Ne cerem scuze, aceasta sectiune nu este disponibila momentan.
-
-	</div>
-
-</br></br></br></br></br></br></br>
+            <?php
+                foreach($articles_w as $article){
+                    if($article['cols']!='yes'){
+                        echo '<div class="service_block">';
+                        if($article['title']!=''){
+                            echo "<div class = 'service_content_title'>
+				<div class='service_content_title_hr'><hr /></div>
+				" . $article['title'] . "
+			</div>";
+                        }
+                            echo "<div class='slide_service'>";
+                            echo $article['text'];
+                            echo '</div>';
+                        echo '</div>';
+                    }
+                }
+            ?>
+        </div>
 
 </center>
 

@@ -20,7 +20,7 @@
                 </label>
             </div>
             <div class="col-lg-10">
-                <textarea class="form-control" name="text2" id="wysiwyg" style="width:600px; height:300px;"></textarea>
+                <textarea class="form-control" name="text2" id="cleditor" style="width:600px; height:300px;"></textarea>
             </div>
             <div class="col-lg-10">
                 <input class="btn btn-primary" type="submit" name="submit" value="Submit">

@@ -241,6 +241,11 @@ body{
 	height: auto!important;
 }
 
+.service_block a{
+    color: #0793c8 !important;
+    text-decoration: none;
+}
+
 .text_link{
 	clear: none;
 	display: inline;
