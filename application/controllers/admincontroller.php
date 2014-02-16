@@ -7,7 +7,7 @@ class AdminController extends Controller {
 	}
 
 
-	function edithome($id = null) {
+	function editpage($id = null) {
 		$this->auth->check();
   		$data = $this->Admin->query("SELECT * FROM `page` WHERE id='$id'");
  		$x = new Img();
@@ -17,10 +17,10 @@ class AdminController extends Controller {
 	function edit($id=null){
 		$d = $_POST;
 		$this->Admin->query("UPDATE `page` SET `title`='".$d['title']."', `text`='".$d['text2']."'   WHERE id='$id'");
-		$this->redirect("/admin/edithome/".$id);
+		$this->redirect("/admin/editpage/".$id);
 	}
 
-	function addHome(){
+	function addPage(){
 		$this->Admin->query('insert into items (item_name) values (\''.mysql_real_escape_string($todo).'\')');
 	}
 	
@@ -48,5 +48,14 @@ class AdminController extends Controller {
         function logout(){
             $this->auth->logout();
         }
-
+        
+        function home(){
+            
+        }
+        
+        function constructii(){
+            
+        }
+        
+        
 }
