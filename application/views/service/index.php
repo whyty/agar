@@ -46,7 +46,7 @@ echo $html->link(array(
                         'action' => 'consultanta',
                         'class' => 'secondary_menu_item',
                         ));
-
+                    
 echo "</div>";
 
 echo "<img class='banner_service' src='".URL."public/images/bannere/banner_constructii.jpg' alt=''>"; ?>
