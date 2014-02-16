@@ -10,12 +10,13 @@ class Auth{
 
 	function check(){
  		if(!$_SESSION['app_admin'] || $_SESSION['app_admin'] == ''){
-			header("Location: /");
+			header("Location: /login");
 		}
 	}
 
 	function logout(){
  		unset($_SESSION['app_admin']);
 		session_destroy();
+                header("Location: /login");
 	}
 }

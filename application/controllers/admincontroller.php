@@ -1,38 +1,22 @@
 <?php
 
 class AdminController extends Controller {
- 	function index(){
-	#	@session_start();
-	
+ 	public function index(){
+            $this->auth->check();
+            $this->set('title','Agar - admin');
 	}
 
-
-	function login(){
-		
-	}
-
-	function logged(){
- 		$username = $_POST['user'];
-		$password = md5($_POST['password']);
-		$userdata = $this->Admin->query("SELECT * FROM `users` WHERE `user`='$username' AND `password`='$password'");
- 		if($userdata){
- 			$this->auth->login($userdata['user']); 
-			$this->redirect("/admin/edithome/1");
-		}else{
-			$this->redirect("/admin/login/");
-		}
-	}
 
 	function edithome($id = null) {
 		$this->auth->check();
-  		$data = $this->Admin->query("SELECT * FROM `articles` WHERE id='$id'");
+  		$data = $this->Admin->query("SELECT * FROM `page` WHERE id='$id'");
  		$x = new Img();
  		$this->set('data', $data);
 	}
 
 	function edit($id=null){
 		$d = $_POST;
-		$this->Admin->query("UPDATE `articles` SET `title`='".$d['title']."', `text`='".$d['text2']."'   WHERE id='$id'");
+		$this->Admin->query("UPDATE `page` SET `title`='".$d['title']."', `text`='".$d['text2']."'   WHERE id='$id'");
 		$this->redirect("/admin/edithome/".$id);
 	}
 
@@ -60,5 +44,9 @@ class AdminController extends Controller {
 	function dashboard(){
 
 	}
+        
+        function logout(){
+            $this->auth->logout();
+        }
 
 }
