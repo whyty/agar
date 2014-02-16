@@ -5,7 +5,7 @@ echo "<center>";
 echo "<div class='secondary_menu'>";
 
 echo $html->link(array(
-                        'text' => 'CONSTRUC&#538II',
+                        'text' => 'CONSTRUCTII',
                         'controller' => 'service',
                         'action' => 'constructions',
                         'class' => 'secondary_menu_item',
@@ -41,7 +41,7 @@ echo $html->link(array(
                         'class' => 'secondary_menu_item',
 			));
 echo $html->link(array(
-			'text' => 'CONSULTAN&#538&#x102',
+			'text' => 'CONSULTANTA',
                         'controller' => 'service',
                         'action' => 'consultanta',
                         'class' => 'secondary_menu_item',
