@@ -10,18 +10,27 @@ class AdminController extends Controller {
 	function editpage($id = null) {
 		$this->auth->check();
   		$data = $this->Admin->query("SELECT * FROM `page` WHERE id='$id'");
- 		$x = new Img();
- 		$this->set('data', $data);
+                if($data[0]['cols'] == 'yes'){
+                    $checked = 'checked="checked"';
+                }else{
+                    $checked = '';
+                }
+ 		$this->set('data', $data[0]);
+                $this->set('checked', $checked);
 	}
 
 	function edit($id=null){
 		$d = $_POST;
-		$this->Admin->query("UPDATE `page` SET `title`='".$d['title']."', `text`='".$d['text2']."'   WHERE id='$id'");
+                if(!isset($d['cols']))
+                    $d['cols'] = 'no';
+		$this->Admin->query("UPDATE `page` SET `title`='".$d['title']."', `text`='".$d['text2']."', `cols` = '".$d['cols']."'   WHERE id='$id'");
 		$this->redirect("/admin/editpage/".$id);
 	}
 
 	function addPage(){
-		$this->Admin->query('insert into items (item_name) values (\''.mysql_real_escape_string($todo).'\')');
+                $this->set('title','Admin - Add page');
+                $types = $this->Admin->query("SELECT * FROM `types` WHERE id <> '9' ORDER BY name ASC");
+		$this->set('types',$types);
 	}
 	
 	function viewall() {
@@ -31,9 +40,11 @@ class AdminController extends Controller {
 	}
 	
 	function add() {
-		$todo = $_POST['todo'];
-		$this->set('title','Success - My Todo List App');
-		$this->set('todo',$this->Item->query('insert into items (item_name) values (\''.mysql_real_escape_string($todo).'\')'));	
+		$data = $_POST;
+                 if(!isset($data['cols']))
+                    $data['cols'] = 'no';
+		$this->Admin->query("INSERT INTO  `page` (title,text,type,cols) VALUES ('" . $data['title'] . "', '" . $data['text2'] . "', '" . $data['types'] . "', '" . $data['cols'] . "')");
+		$this->redirect("/admin/dashboard");	
 	}
 	
 	function delete($id = null) {

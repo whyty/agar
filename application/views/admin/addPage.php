@@ -6,8 +6,18 @@
             </div>
             <div class="col-lg-10">
                 <select name="types">
-                    <option value="<?php echo "";?>"><?php echo "";?></option>
+                    <?php
+                        
+                        foreach($types as $type){
+                            echo'<option value="' . $type['id'] . '">'. $type['name'] .'</option>';
+                        }
+                    ?>
                 </select>
+            </div>
+            <div class="col-lg-10">
+                <label>
+                    <input name="cols" type="checkbox" value="yes"> Columns
+                </label>
             </div>
             <div class="col-lg-10">
                 <textarea class="form-control" name="text2" id="wysiwyg" style="width:600px; height:300px;"></textarea>
