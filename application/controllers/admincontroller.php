@@ -28,6 +28,7 @@ class AdminController extends Controller {
 	}
 
 	function addPage(){
+                $this->auth->check();
                 $this->set('title','Admin - Add page');
                 $types = $this->Admin->query("SELECT * FROM `types` ORDER BY name ASC");
 		$this->set('types',$types);

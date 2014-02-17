@@ -3,12 +3,12 @@
 <link rel="stylesheet" type="text/css" href="/public/css/bootstrap.min.css">
 	<!--<link rel="stylesheet" type="text/css" href="/public/css/jquery.wysiwyg.css">-->
         <link rel="stylesheet" type="text/css" href="/public/css/jquery.cleditor.css">
-	<script src="/public/js/jquery.1.6.js"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
 	<script src="/public/js/jquery.cleditor.js"></script> 
 	<!--<script src="/public/js/wysiwyg.image.js"></script> 
 	<script src="/public/js/wysiwyg.link.js"></script> 
 	<script src="/public/js/wysiwyg.table.js"></script> -->
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="/public/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 $(function() {
     //$('#wysiwyg').wysiwyg();
@@ -62,9 +62,27 @@ $(function() {
                 <div class="navbar-collapse collapse navbar-responsive-collapse">
                   <ul class="nav navbar-nav">
                     <li><a href="/admin/home">Acasa</a></li>
-                    <li><a href="/admin/servicii">Servicii</a></li>
+                    <li class="dropdown">
+                        <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Service <b class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="/admin/constructions">Contructii</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="/admin/rentacar">Rent a car</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="/admin/parcauto">Parc Auto</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="/admin/aparthotel">ApartHotel</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="/admin/imobiliare">Imobiliare</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="/admin/playandwin">Play &  Win</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="/admin/consultanta">Consultanta</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/admin/contact">Contact</a></li>
-                    <li><a href="/admin/portofoliu">Portofoliu</a></li>
+                    <li class="dropdown">
+                        <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Portofoliu <b class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="/admin/addProject">Add Project</a></li>
+                          <li role="presentation" class="divider"></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="/admin/projects">View Projects</a></li>
+                        </ul>
+                    </li>
                   </ul>
                   
                   <ul class="nav navbar-nav navbar-right">
