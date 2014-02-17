@@ -10,11 +10,9 @@
 			<div class='home_block'>
 				<div class = 'home_content_title'>
 					<div class='home_content_title_hr'><hr /></div>
-					CONTACT
+					<?php echo $contact['title']; ?>
 				</div>
-				str. Lucian Blaga nr.1 ap.27, 300001, Timi&#351oara</br>
-				Tel: +40 - 762 - 09999</br>
-				office@agarcompany.com</br>
+				<?php echo $contact['text']; ?>
 			</div>
 
 		</div>
