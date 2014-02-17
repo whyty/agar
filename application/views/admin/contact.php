@@ -1,7 +1,7 @@
 <div class="row">
         <div class="col-sm-12">
            <?php 
-                foreach($home_data as $data){
+                foreach($contact_data as $data){
                     echo '<div class="panel panel-default">  
                             <div class="panel-heading">
                                 <h3 class="panel-title">';
