@@ -183,18 +183,16 @@ class AdminController extends Controller {
         
         function addP(){
             $this->auth->check();
-            $file = $_FILES['file'];
+            $file = $_FILES;
             $data = $_POST;
-  
-            if(!file_exists($file['name'])){
-                $img = new Img();
-                $rn = rand(1,139023);
-                $img->add($file,"projects",$rn);
-                $this->Admin->query("INSERT INTO  `projects` (title,text,image) VALUES ('" . $data['title'] . "', '" . $data['text2'] . "', '".$rn."-".$file['name'] . "')");
-                $this->redirect("/admin/dashboard");
-            }else{
-                $this->redirect("/admin/addProject"); 
-            }
+            $rn = rand(1,139023);
+            ($file['file']['name']!='') ? $filename = $rn."-".$file['file']['name'] : $filename = '';
+
+            $img = new Img();
+            $img->add($file,"projects",$rn);
+            $this->Admin->query("INSERT INTO  `projects` (title,text,image) VALUES ('" . $data['title'] . "', '" . $data['text2'] . "', '". $filename . "')");
+            $this->redirect("/admin/projects");
+
         }
         
         function editProject($id){
@@ -210,12 +208,17 @@ class AdminController extends Controller {
             $Im = new Img();
            
             $image = $this->Admin->query("SELECT image FROM `projects` WHERE id='$id'");
-            if($image[0]['image']!='')
-                $Im->remove($file['file']['name'], "/projects");
+            
             $rand = rand(1,139023);
-            $Im->add($file, "projects",$rand);
+            if($file['file']['name']!=''){
+                if($image[0]['image']!='')
+                    $Im->remove($file['file']['name'], "/projects");
+                $Im->add($file, "projects",$rand);
+                
+            }
+            ($file['file']['name']!='') ? $filename = $rand."-".$file['file']['name'] : $filename = $image[0]['image'];
 
-            $this->Admin->query("UPDATE `projects` SET title='".$pr['title']."',text='".$pr['text2']."',image='".$rand."-".$file['file']['name']."' WHERE id='$id'");
+            $this->Admin->query("UPDATE `projects` SET title='".$pr['title']."',text='".$pr['text2']."',image='".$filename."' WHERE id='$id'");
             $this->redirect("/admin/editProject/".$id);
         }
         
@@ -260,10 +263,12 @@ class AdminController extends Controller {
         function addImg($id){
             $file = $_FILES;
             $gal = new Img();
-            $r = rand(1,139023);
-            $gal->add($file,"gallery",$r);
-            $this->Admin->query("INSERT INTO  `gallery` (image,project_id) VALUES ('" . $r . "-" . $file["file"]['name'] . "', '" . $id . "')");
-            $this->redirect("/admin/gallery/".$id);
+            if($file['file']['name']!=''){
+                $r = rand(1,139023);
+                $gal->add($file,"gallery",$r);
+                $this->Admin->query("INSERT INTO  `gallery` (image,project_id) VALUES ('" . $r . "-" . $file["file"]['name'] . "', '" . $id . "')");
+                $this->redirect("/admin/gallery/".$id);
+            }
         }
         
         function delImg($id){

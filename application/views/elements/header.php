@@ -1,11 +1,12 @@
 <html>
 <head>
-	<title> agar </title>
+	<title> <?php echo $title ; ?> </title>
 	<link rel="stylesheet" type="text/css" href="<?php echo URL; ?>public/css/default.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>public/css/prettyPhoto.css">
 	<script src="<?php echo URL; ?>public/js/jquery.js"></script> 
 	<script src="<?php echo URL; ?>public/js/agar.js"></script> 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script> 
 	<script src="<?php echo URL; ?>public/js/readmore.js"></script>
+        <script src="<?php echo URL; ?>public/js/jquery.prettyPhoto.js"></script>
 </head>
 <body>
 	<div id="fb-root"></div>

@@ -144,7 +144,7 @@ body{
 }
 
 .home_block{
-	height: auto!!important;
+	height: auto!important;
 	overflow: hidden;
 	/*word-spacing: 4px;*/
 	font-weight: 500;
@@ -177,7 +177,13 @@ body{
 	height: 350px;
 	width: 1050px;
 }
-
+.banner_service2{
+	position: relative;
+	margin-top: -5px;
+        margin-left:3px;
+	height: 350px;
+	width: 1050px;
+}
 .secondary_menu{
 	width: 1050px;
 	height: 50px;
@@ -515,6 +521,12 @@ body{
 	text-decoration: underline;
 }
 
+.link_gallery{
+        color: #0793c8 !important;
+	text-decoration: none;
+        float: right;
+        margin-top:15px;
+}
 
 .footer_menu a:link, a:visited
 {
