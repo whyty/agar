@@ -413,6 +413,13 @@ body{
 	z-index: 100;
 	margin-left: 40px;
 	overflow: visible;
+        margin-bottom: 10px;
+}
+.google_button{
+    margin-bottom: 10px;
+}
+.currency_info{
+    margin-top: -9px;
 }
 
 /*end extra_information element*/
