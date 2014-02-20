@@ -538,6 +538,15 @@ body{
         margin:15px 0;
 }
 
+.link_projects{
+        color: #0793c8 !important;
+        font-family: helvetica;
+        font-size: 13px;
+	text-decoration: none;
+        float: right;
+        margin:15px 55px 0 0;
+}
+
 .footer_menu a:link, a:visited
 {
 	color: #fff;

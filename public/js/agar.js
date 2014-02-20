@@ -37,7 +37,7 @@ $( document ).ready(function() {
                        if(link .match(/index/g)){
                             $.each($(".secondary_menu_item"), function(){
                                 var sec = $(this).attr("href"); 
-                                if(sec.match(/index/g) ){
+                                if(sec.match(/constructions/g) ){
                                      $(".secondary_menu_item").removeClass('secondary_active');
                                      $(this).addClass('secondary_active');
                                 }
@@ -109,6 +109,16 @@ $( document ).ready(function() {
                        $(this).addClass('primary_active');
                    }
                });   
+            }
+            
+            if (link == "/"){
+                $.each($(".primary_menu_item"), function(){
+                     var atr = $(this).attr("href");
+                     if(atr.match(/home/g)){
+                         $(".primary_menu_item").removeClass('primary_active');
+                         $(this).addClass('primary_active');
+                     }
+                 });  
             }
   
         

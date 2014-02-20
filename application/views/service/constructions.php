@@ -76,6 +76,7 @@ echo "<img class='banner_service' src='".URL."public/images/bannere/banner_const
                             </div>
                         </div>";
                     }
+                    echo "<a class='link_projects' href='".URL."service/projects'>Portofoliu</a>";
                 }
             ?>
 		

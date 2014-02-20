@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 20, 2014 at 07:12 AM
+-- Generation Time: Feb 20, 2014 at 08:22 AM
 -- Server version: 5.5.35
 -- PHP Version: 5.3.10-1ubuntu3.9
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `page` (
   `cols` enum('no','yes') NOT NULL DEFAULT 'no',
   PRIMARY KEY (`id`),
   KEY `type` (`type`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
 
 --
 -- Dumping data for table `page`
@@ -85,8 +85,7 @@ CREATE TABLE IF NOT EXISTS `projects` (
 
 INSERT INTO `projects` (`id`, `title`, `text`, `image`) VALUES
 (2, 'CONSTRUCTIE CASA PENTRU LOCUIT', '<span style="font-family: helvetica; font-size: 12px; text-align: justify; background-color: rgb(255, 255, 255);">Constructia unei vile cu etaj si mansarda.</span><div><br></div>', '68287-penultima_lucrare.jpg'),
-(3, 'REABILITARE BLOC DE LOCUINTE', '<span style="font-family: helvetica; font-size: 12px; text-align: justify; background-color: rgb(255, 255, 255);">Reabilitarea unui bloc de locuinte din zona centrala a orasului, ce a inclus: izolare termica, constructia acoperisului si mansardare, renovarea fatadei.</span>', '127035-ultima_lucrare.jpg'),
-(4, 'test', 'dsfpskpapsfkpasf', '32391-penultima_lucrare.jpg');
+(3, 'REABILITARE BLOC DE LOCUINTE', '<span style="font-family: helvetica; font-size: 12px; text-align: justify; background-color: rgb(255, 255, 255);">Reabilitarea unui bloc de locuinte din zona centrala a orasului, ce a inclus: izolare termica, constructia acoperisului si mansardare, renovarea fatadei.</span>', '127035-ultima_lucrare.jpg');
 
 -- --------------------------------------------------------
 
