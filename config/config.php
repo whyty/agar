@@ -3,8 +3,8 @@
 /** Configuration Variables **/
 
 define ('DEVELOPMENT_ENVIRONMENT',true);
-define('URL', 'http://agar.dev/');
-define('DB_NAME', 'agar_db');
-define('DB_USER', 'root');
-define('DB_PASSWORD', '1');
+define('URL', 'http://agar.masterserver.org//');
+define('DB_NAME', 'agar');
+define('DB_USER', 'agaruser');
+define('DB_PASSWORD', 'hLrK6DqEmzG64faM');
 define('DB_HOST', 'localhost');
