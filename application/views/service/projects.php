@@ -67,13 +67,8 @@ echo "<img class='banner_service2' src='".URL."public/images/bannere/banner_cons
                                                         ".$proiect['title']."
                                                 </div>
                                         ".$proiect['text']; 
-                              echo"<a class='link_gallery' rel='prettyPhoto[pp_gal".$proiect['id']."]' href='".URL."public/gallery/".$imagini[$proiect['id']][0]['image']."'>GALERIE</a>";
-                              echo "<div style='visibility: hidden'>";
-                              for($i=1; $i < count($imagini[$proiect['id']]); $i++){
-
-                                  echo"<a href='".URL."public/gallery/". $imagini[$proiect['id']][$i]['image']."' rel='prettyPhoto[pp_gal".$proiect['id']."]'></a>";
-                              }
-                              echo "</div>
+                              echo"<a class='link_gallery' rel='prettyPhoto[pp_gal".$proiect['id']."]' href='".URL."public/projects/".$proiect['image']."'>GALERIE</a>";
+                              echo"
                                 </div>
                               </div>
                             ";

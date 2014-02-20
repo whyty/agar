@@ -32,7 +32,7 @@
 
 		echo "<div class='primary_menu'>";
 		echo $html->link(array(
-			'text' => "ACAS&#258",
+			'text' => "ACASA",
 			'controller' => 'home',
 			'action' => 'index',
 			'class' => 'primary_menu_item',

@@ -242,41 +242,8 @@ class AdminController extends Controller {
             $Is = new Img();
             $im = $this->Admin->query("SELECT image FROM `projects` WHERE id='$id'");
             $Is->remove($im[0]['image'],'projects');
-            $pictures = $this->Admin->query("SELECT * FROM `gallery` where project_id='$id'");
-            if(count($pictures > 0)){
-                foreach($pictures as $picture){
-                    $Is->remove($picture['image'],'gallery');
-                    $this->Admin->query("DELETE FROM `gallery` WHERE id='".$picture['id']."'");
-                }
-            }
             $this->Admin->query("DELETE FROM `projects` WHERE id='$id'");
             $this->redirect("/admin/projects/");
         }
         
-        function gallery($id){
-            $this->auth->check();
-            $pictures= $this->Admin->query("SELECT * FROM `gallery` WHERE project_id='$id'");
-            $this->set("pictures",$pictures);
-            $this->set("id",$id);
-        }
-        
-        function addImg($id){
-            $file = $_FILES;
-            $gal = new Img();
-            if($file['file']['name']!=''){
-                $r = rand(1,139023);
-                $gal->add($file,"gallery",$r);
-                $this->Admin->query("INSERT INTO  `gallery` (image,project_id) VALUES ('" . $r . "-" . $file["file"]['name'] . "', '" . $id . "')");
-                $this->redirect("/admin/gallery/".$id);
-            }
-        }
-        
-        function delImg($id){
-            $this->auth->check();
-            $pic = new Img();
-            $picture = $this->Admin->query("SELECT * FROM `gallery` WHERE id='$id'");
-            $pic->remove($picture[0]['image'],'gallery');
-            $this->Admin->query("DELETE FROM `gallery` WHERE id='$id'");
-            $this->redirect("/admin/gallery/".$picture[0]['project_id']);
-        }
 }

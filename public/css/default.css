@@ -227,7 +227,7 @@ body{
 }
 
 .service_content_title{
-	margin-top: 32px;
+	margin-top: 22px;
 	margin-bottom: 15px;
 	color: #919191;
 }
@@ -497,6 +497,12 @@ body{
 	background-color: #fdc426;
 }
 
+.primary_active{
+    color: #000000 !important;
+    text-decoration: none;
+    background-color: #fdc426;
+}
+
 
 .secondary_menu a:link, .secondary_menu a:visited
 {
@@ -507,6 +513,10 @@ body{
 {
 	color: #000;
 	text-decoration: underline;
+}
+
+.secondary_active{
+    text-decoration: underline !important;
 }
 
 
@@ -525,7 +535,7 @@ body{
         color: #0793c8 !important;
 	text-decoration: none;
         float: right;
-        margin-top:15px;
+        margin:15px 0;
 }
 
 .footer_menu a:link, a:visited
@@ -537,6 +547,9 @@ body{
 {
 	color: #fff;
 	text-decoration: underline;
+}
+.slide, .slide_service{
+    margin-bottom: 10px;
 }
 
 /*end link management*/

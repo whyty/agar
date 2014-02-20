@@ -5,8 +5,10 @@ class ServiceController extends Controller {
         
 	function index(){
            $this->set('title','Agar - Servicii &raquo; Constructii');
-           $content_i = $this->getData("page",2); 
-             $this->set("articles_i", $content_i);
+           $content_i = $this->getData("page",2);
+           $projects_i = $this->Service->query("SELECT * FROM `projects` ORDER BY id DESC LIMIT 2");
+           $this->set("projects_i",$projects_i);
+           $this->set("articles_i", $content_i);
 	}
 
 	function constructions(){
@@ -64,15 +66,8 @@ class ServiceController extends Controller {
         
         function projects(){
             $this->set('title','Agar - Servicii &raquo; Proiecte');
-            /*$proiecte = $this->Service->query("SELECT projects.id, projects.title, projects.text, gallery.image, gallery.project_id
-FROM projects INNER JOIN gallery ON projects.id = gallery.project_id ORDER BY projects.title");*/
             $proiecte = $this->Service->query("SELECT * FROM `projects`");
-            foreach($proiecte as $proiect){
-                $img = $this->Service->query("SELECT * FROM `gallery` WHERE project_id='".$proiect['id']."'");
-                $imagini[$proiect['id']] = $img;
-            }
-            $this->set("proiecte",$proiecte);
-            $this->set("imagini",$imagini);
+            $this->set("proiecte",$proiecte);;
         }
  
 }

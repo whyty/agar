@@ -46,7 +46,7 @@ echo $html->link(array(
                         'action' => 'consultanta',
                         'class' => 'secondary_menu_item',
                         ));
-                    
+
 echo "</div>";
 
 echo "<img class='banner_service' src='".URL."public/images/bannere/banner_constructii.jpg' alt=''>"; ?>
@@ -58,33 +58,32 @@ echo "<img class='banner_service' src='".URL."public/images/bannere/banner_const
 	<?php echo "<img class='linie_neagra' src='".URL."public/images/linie_neagra.png' alt=''>"; ?>
 
 	<div class='side_data'>
-		<div class='constructions_project_photos'>
-			<?php	echo "<img class='construction_photo' src='".URL."public/images/construction_images/ultima_lucrare.jpg' alt=''>"; ?>
-			<div class='contruction_photo_text'>
-				<div class='construction_photo_text_title'>
-					<div class='construction_photo_end_hr'><hr /></div>
-					REABILITARE BLOC DE LOCUINTE
-				</div>
-				Reabilitarea unui bloc de locuinte din zona centrala a orasului, ce a inclus: izolare termica, constructia acoperisului si mansardare, renovarea fatadei.
-			</div>
-		</div>
+            
+            <?php
+            
+           
+                if(count($projects_i) > 0){
+                    foreach($projects_i as $project){
+                  
+                        echo "<div class='constructions_project_photos'>
+                            <a href='".URL."service/projects'><img class='construction_photo' src='".URL."public/projects/".$project['image']."' alt=''></a>
+                            <div class='contruction_photo_text'>
+                                    <div class='construction_photo_text_title'>
+                                            <div class='construction_photo_end_hr'><hr /></div>
+                                            ".$project['title']."
+                                    </div>
+                                    ".$project['text']."
+                            </div>
+                        </div>";
+                    }
+                }
+            ?>
+		
+    </div>
 
 
-		<div class='constructions_project_photos'>
-			<?php	echo "<img class='construction_photo' src='".URL."public/images/construction_images/penultima_lucrare.jpg' alt=''>"; ?>
-			<div class='contruction_photo_text'>
-				<div class='construction_photo_text_title'>
-					<div class='construction_photo_end_hr'><hr /></div>
-					CONSTRUCTIE CASA PENTRU LOCUIT
-				</div>
-				Constructia unei vile cu etaj si mansarda.
-			</div>
-		</div>
-	</div>
 
-
-
-	<div class ='blocks'>
+    <div class ='blocks'>
             <?php
                 foreach($articles_i as $article){
                     if($article['cols']!='yes'){
@@ -102,7 +101,8 @@ echo "<img class='banner_service' src='".URL."public/images/bannere/banner_const
                     }
                 }
             ?>
-        </div>
+    </div>
+
 </center>
 
 

@@ -11,10 +11,9 @@
                         <div class="panel-body">';
                         echo '<a href="/admin/editProject/'.$data['id'].'" style"float:left;">editeaza</a> 
                               <a href="/admin/deleteProject/'.$data['id'].'" style"float:left; margin-left:50px;">sterge</a>
-                              <a href="/admin/gallery/'.$data['id'].'" style"float:left; margin-left:50px;">galerie</a> 
                          </div>
                     </div>';
                 } 
            
            ?>
-</div
+        </div>

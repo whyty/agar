@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 20, 2014 at 05:44 AM
+-- Generation Time: Feb 20, 2014 at 07:12 AM
 -- Server version: 5.5.35
 -- PHP Version: 5.3.10-1ubuntu3.9
 
@@ -23,34 +23,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gallery`
---
-
-CREATE TABLE IF NOT EXISTS `gallery` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `image` varchar(128) NOT NULL,
-  `project_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
-
---
--- Dumping data for table `gallery`
---
-
-INSERT INTO `gallery` (`id`, `image`, `project_id`) VALUES
-(4, '85324-penultima_lucrare.jpg', 2),
-(7, '76514-ultima_lucrare.jpg', 2),
-(8, '115273-ultima_lucrare.jpg', 2),
-(9, '29382-penultima_lucrare.jpg', 2),
-(10, '70322-ultima_lucrare.jpg', 3),
-(11, '103842-ultima_lucrare.jpg', 3),
-(12, '34033-ultima_lucrare.jpg', 3),
-(13, '52522-ultima_lucrare.jpg', 3),
-(14, '111569-ultima_lucrare.jpg', 2);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `page`
 --
 
@@ -62,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `page` (
   `cols` enum('no','yes') NOT NULL DEFAULT 'no',
   PRIMARY KEY (`id`),
   KEY `type` (`type`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
 
 --
 -- Dumping data for table `page`
