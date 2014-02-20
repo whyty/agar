@@ -57,8 +57,46 @@ echo "<img class='banner_service2' src='".URL."public/images/bannere/banner_cons
 
                 <?php 
                     if(count($proiecte) > 0){
+                        $i = 1;
+                        echo "<div>";
                         foreach($proiecte as $proiect){
-                                                          echo "
+                            if($i >= 3){
+                                if($i % 3 == 0){
+                                    echo "
+                                        <div class='home_block'>
+                                            <img class='construction_photo' src='".URL."public/projects/".$proiect['image']."' alt=''>
+                                            <div class='contruction_photo_text'>
+                                                        <div class='construction_photo_text_title'>
+                                                                <div class='construction_photo_end_hr'><hr /></div>
+                                                                ".$proiect['title']."
+                                                        </div>
+                                                ".$proiect['text']; 
+                                    echo"<a class='link_gallery' rel='prettyPhoto[pp_gal]' href='".URL."public/projects/".$proiect['image']."'>GALERIE</a>";
+                                    echo"
+                                            </div>
+                                        </div>
+                                        ";
+                                    echo "<div style='clear:both'></div></div><div>";
+                                }else{
+                                   echo "
+                                        <div class='home_block'>
+                                            <img class='construction_photo' src='".URL."public/projects/".$proiect['image']."' alt=''>
+                                            <div class='contruction_photo_text'>
+                                                        <div class='construction_photo_text_title'>
+                                                                <div class='construction_photo_end_hr'><hr /></div>
+                                                                ".$proiect['title']."
+                                                        </div>
+                                                ".$proiect['text']; 
+                                    echo"<a class='link_gallery' rel='prettyPhoto[pp_gal]' href='".URL."public/projects/".$proiect['image']."'>GALERIE</a>";
+                                    echo"
+                                            </div>
+                                        </div>
+                                        "; 
+                                }
+                              
+                            }else{
+                                  
+                               echo "
                                 <div class='home_block'>
                                     <img class='construction_photo' src='".URL."public/projects/".$proiect['image']."' alt=''>
                                     <div class='contruction_photo_text'>
@@ -73,6 +111,9 @@ echo "<img class='banner_service2' src='".URL."public/images/bannere/banner_cons
                               </div>
                             ";
                             }
+                            $i++;
+                        }
+                            echo "<div style='clear:both'></div></div>";
                     }
                 ?>
                
