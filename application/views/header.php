@@ -2,12 +2,12 @@
 <head>
 	<title> <?php echo $title ; ?> </title>
 	
-        <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>public/css/prettyPhoto.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>public/css/default.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>resources/css/prettyPhoto.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>resources/css/default.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
-        <script src="<?php echo URL; ?>public/js/agar.js"></script> 
-	<script src="<?php echo URL; ?>public/js/readmore.js"></script>
-	<script src="<?php echo URL; ?>public/js/jquery.prettyPhoto.js"></script>
+        <script src="<?php echo URL; ?>resources/js/agar.js"></script> 
+	<script src="<?php echo URL; ?>resources/js/readmore.js"></script>
+	<script src="<?php echo URL; ?>resources/js/jquery.prettyPhoto.js"></script>
         <script type="text/javascript" charset="utf-8">
         $(document).ready(function(){
             $("a[rel^='prettyPhoto']").prettyPhoto();

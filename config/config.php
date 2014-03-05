@@ -3,8 +3,8 @@
 /** Configuration Variables **/
 
 define ('DEVELOPMENT_ENVIRONMENT',true);
-define('URL', 'http://agarcompany.com/');
-define('DB_NAME', 'agarcomp_db');
-define('DB_USER', 'agarcomp_user');
-define('DB_PASSWORD', 'agar123$%');
+define('URL', 'http://agar.dev/');
+define('DB_NAME', 'agar_db');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '1');
 define('DB_HOST', 'localhost');

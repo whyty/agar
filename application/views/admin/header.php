@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="/public/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="/public/css/jquery.cleditor.css">
+<link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/resources/css/jquery.cleditor.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
-	<script src="/public/js/jquery.cleditor.js"></script> 
-	<script src="/public/js/bootstrap.min.js"></script>
+	<script src="/resources/js/jquery.cleditor.js"></script> 
+	<script src="/resources/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 $(function() {
     //$('#wysiwyg').wysiwyg();
